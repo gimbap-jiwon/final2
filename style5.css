@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+/********************common********************/
+/* 전체 스크롤바 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/* 스크롤바 트랙 (배경) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+/* 스크롤바 썸(움직이는 부분) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+/* 마우스 오버 시 썸 색상 변경 */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/********************header********************/
+header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 0 36px;
+  z-index: 3;
+  background: yellowgreen;
+}
+header {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  /*height:40vh;*/
+  border-bottom: 4px dotted whitesmoke;
+}
+.profile {
+  width: 100%;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 40px;
+}
+h1 strong {
+  display: block;
+  font-size: 50px;
+  font-weight: 900;
+}
+.profile .img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  aspect-ratio: 2/1;
+  margin: 24px auto;
+  background: whitesmoke;
+  border-radius: 50%;
+}
+.profile img {
+  width: 50%;
+}
+
+/********************container********************/
+#container {
+  width: 100%;
+  height: auto;
+}
+.visual {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+}
+.visual .video-bg {
+  position: right;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+/* .middle .thumb-box {
+        display: flex;
+      }
+      .middle .thumb-box label {
+        position: relative;
+        width: calc(100% / 3);
+        aspect-ratio: 1/1;
+      }
+      .middle .thumb-box input[type="checkbox"] {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+      .middle .thumb-box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        cursor: pointer;
+      }
+      .middle .thumb-box img:hover {
+        cursor: url("../img/ico_4.svg") 16 16, auto;
+        border: 5px solid yellowgreen;
+      }
+      .modal {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 4;
+      }
+      .modal img {
+        width: 30%;
+        aspect-ratio: 1/1;
+      }
+      .modal .close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: #fff;
+        font-size: 50px;
+        cursor: pointer;
+      }
+
+      .thumb-box:has(#modal1:checked) ~ .modal1,
+      .thumb-box:has(#modal2:checked) ~ .modal2,
+      .thumb-box:has(#modal3:checked) ~ .modal3 {
+        display: flex;
+      }*/
+.work {
+  width: 500px;
+  margin: 0 auto;
+}
+.work ul {
+  position: relative;
+  height: 500px;
+}
+.work li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  animation: fade 10s infinite;
+}
+.work li img {
+  width: 100%;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.work ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+.work ul li:nth-child(2) {
+  animation-delay: 5s;
+}
+.bottom {
+  display: flex;
+  height: 30%;
+}
+.bottom > div {
+  width: calc(100% / 3);
+  padding: 30px;
+  text-align: center;
+}
+.bottom > div h2 {
+  margin-bottom: 24px;
+}
+.skills table {
+  width: 100%;
+  margin: 0 auto;
+}
+.skills tr {
+  height: 45px;
+}
+.skills th {
+  text-align: left;
+  border-bottom: 1px solid #000;
+}
+.skills td {
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
+.chart table {
+  width: 100%;
+  margin: 0 auto;
+}
+.chart tr {
+  height: 45px;
+}
+.chart th {
+  text-align: left;
+  border-bottom: 1px solid #000;
+}
+.chart td {
+  text-align: right;
+  font-size: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
+.position table {
+  width: 100%;
+  margin: 0 auto;
+}
+.position tr {
+  height: 45px;
+}
+.position th {
+  text-align: left;
+  border-bottom: 1px solid #000;
+}
+.position td {
+  text-align: right;
+  font-size: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
